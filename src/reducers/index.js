@@ -1,5 +1,9 @@
-
-//
+import {
+    UPDATE_INPUT,
+    CALCULATE,
+    FINAL_CALCULATE,
+    CLEAR
+} from "../types"
 
 const initialState = {
     allInputs : [],   //  used to store history of previous calucations
@@ -12,7 +16,7 @@ const calculatorReducer = (state = initialState, action) => {
     switch (action.type) {
         
       //updates input field
-      case 'UPDATE_INPUT':
+      case UPDATE_INPUT:
             let input;
             if(state.reset){
                 input = action.input.toString();
@@ -26,9 +30,9 @@ const calculatorReducer = (state = initialState, action) => {
             return {...state , inputvalue : input, reset: false}
 
      //calculates the result based on click of '+' or  '-' button
-      case 'CALCULATE':
+      case CALCULATE:
             let allInputs = state.allInputs;
-            allInputs.push(Math.abs(state.inputvalue));
+            allInputs.push(Math.abs(state.inputvalue).toString());
             allInputs.push(action.operator);
 
             let inputsForCalc = allInputs.slice();
@@ -37,12 +41,12 @@ const calculatorReducer = (state = initialState, action) => {
             return {...state , allInputs : allInputs ,inputvalue : result , reset: true}
 
      //caluates final result on click of  '=' and resets all the existing calculations
-      case 'FINAL_CALCULATE':
+      case FINAL_CALCULATE:
             let finalResult = eval(state.allInputs.join("") + state.inputvalue);
             return {...state , allInputs : [] , inputvalue : finalResult , reset: true}
 
       //clears all the values
-      case 'CLEAR':
+      case CLEAR:
             return {...state , allInputs : [], inputvalue : 0 , reset: true }
 
       default:
