@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import {updateInput, calculate , calculateFinal, clearAll} from '../actions';
-import KeyboardAccessibility from '../utilities/KeyboardAccessibility';
+import KeyboardAccessibility from '../utilities/KeyboardAccessibility'; //HOC component for keyboard accessibility
 
 class Keypad extends Component {
     render() {
@@ -59,3 +59,4 @@ class Keypad extends Component {
     mapStateToProps,
     mapDispatchToProps
   )(KeyboardAccessibility(Keypad));
+  

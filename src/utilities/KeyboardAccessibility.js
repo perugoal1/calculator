@@ -1,5 +1,5 @@
 import React from 'react';
-
+  //HOC component for keyboard accessibility
   function KeyboardAccessibilty( WrappedComponent ) {
     return class extends React.Component {
       
