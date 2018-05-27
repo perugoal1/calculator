@@ -58,4 +58,4 @@ class Keypad extends Component {
   export default connect(
     mapStateToProps,
     mapDispatchToProps
-  )((Keypad));
+  )(KeyboardAccessibility(Keypad));
