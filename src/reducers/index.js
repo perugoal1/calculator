@@ -28,7 +28,7 @@ const calculatorReducer = (state = initialState, action) => {
      //calculates the result based on click of '+' or  '-' button
       case 'CALCULATE':
             let allInputs = state.allInputs;
-            allInputs.push(state.inputvalue);
+            allInputs.push(Math.abs(state.inputvalue));
             allInputs.push(action.operator);
 
             let inputsForCalc = allInputs.slice();
