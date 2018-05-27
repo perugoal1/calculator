@@ -5,9 +5,12 @@ class Displaybar extends Component {
     render() {
       return (
         <div>
+          {/* Displays History of Previuos Calculations */}
           <div className="display">
-           {this.props.display}
+           {this.props.allInputs.join(" ")}
           </div>
+
+          {/* Holds both the Result and the entered input */}
           <div className="inputDisplay">
             <input type="text"  className="inputDisplayTxt" value={this.props.inputvalue}  readOnly/>
           </div>
@@ -18,8 +21,7 @@ class Displaybar extends Component {
 
   const mapStateToProps = (state) => ({
     inputvalue: state.inputvalue,
-    display: state.display,
-    result: state.result
+    allInputs: state.allInputs
   })
 
   export default connect(

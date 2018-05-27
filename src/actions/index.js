@@ -1,16 +1,22 @@
+//updates input field
 export const updateInput = (input) => ({
     type: 'UPDATE_INPUT',
     input
 })
 
-export const addnumbers = () => ({
-    type: 'ADD'
+
+//calculates the result based on click of '+' or  '-' button
+export const calculate = (operator) => ({
+    type: 'CALCULATE',
+    operator
 })
 
-export const subtractNumbers = () => ({
-    type: 'SUBTRACT'
+//caluates final result on click of  '=' and resets all the existing calculations
+export const calculateFinal = () => ({
+    type: 'FINAL_CALCULATE',
 })
 
+//clears all the values
 export const clearAll = () => ({
     type: 'CLEAR',
 })
