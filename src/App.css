@@ -30,6 +30,7 @@
   height: 40px;
   font-size: 35px;
   color: #5c5c5c;
+  text-align:right;
 }
 .inputDisplayTxt:focus{
   outline: none;

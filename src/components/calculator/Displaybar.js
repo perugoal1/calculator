@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
 class Displaybar extends Component {
     render() {
       return (
         <div>
           <div className="display">
-           1 + 3
+           {this.props.display}
           </div>
           <div className="inputDisplay">
-            <input type="number"  className="inputDisplayTxt"/>
+            <input type="text"  className="inputDisplayTxt" value={this.props.inputvalue}  readOnly/>
           </div>
         </div>
       );
     }
   }
-  
-  export default Displaybar;
+
+  const mapStateToProps = (state) => ({
+    inputvalue: state.inputvalue,
+    display: state.display,
+    result: state.result
+  })
+
+  export default connect(
+    mapStateToProps
+  )(Displaybar);
 
   
