@@ -9,6 +9,6 @@ Below are the details with repsect to the app
 
 
 
-To run the app in the development mode --> ```sh npm start ```
+To run the app in the development mode --> ``` npm start ```
 
-To deploy to Github Pages --> ```sh npm run deploy ```
+To deploy to Github Pages --> ``` npm run deploy ```
