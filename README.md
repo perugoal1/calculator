@@ -1,4 +1,4 @@
-##Simple Calculator App Made Using React and Redux
+## Simple Calculator App Made Using React and Redux
 
 The project demo available at : [https://perugoal1.github.io/calculator/](https://perugoal1.github.io/calculator/).
 
