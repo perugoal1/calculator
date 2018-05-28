@@ -6,7 +6,8 @@ Below are the details with repsect to the app
  - Base created using Create-React-App
  - React and Redux used to develop the App
  - No frameworks used for CSS styling
- - Unit Tested functionalities in actions and reducers using Jest.
+ - Unit Tested functionalities in actions and reducers using Jest
+ - Keyboard accessibility added
 
 
 
