@@ -51,7 +51,8 @@ describe('Test Reducers', () => {
       {
         allInputs : [],  
         inputvalue : 0, 
-        reset: false  
+        reset: true ,
+        clickedOperator: false
       }
     )
   });
@@ -71,7 +72,8 @@ describe('Test Reducers', () => {
       {
         allInputs : [],  
         inputvalue : "11", 
-        reset: false
+        reset: false,
+        clickedOperator: false
       }
     )
   });
@@ -91,7 +93,8 @@ describe('Test Reducers', () => {
       {
         allInputs : ['1','+','1','+'],  
         inputvalue : 2, 
-        reset: true
+        reset: true,
+        clickedOperator: true
       }
     )
   });
@@ -109,7 +112,8 @@ describe('Test Reducers', () => {
       {
         allInputs : [],  
         inputvalue : 3, 
-        reset: true
+        reset: true,
+        clickedOperator: false
       }
     )
   });
@@ -127,7 +131,8 @@ describe('Test Reducers', () => {
       {
         allInputs : [],  
         inputvalue : 0, 
-        reset: true
+        reset: true,
+        clickedOperator: false
       }
     )
   });
